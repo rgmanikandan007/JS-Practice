@@ -58,8 +58,27 @@
 // console.log(empty);
 
 // Find the minimum number in an array
-let min = [1,2,3,4,5];
-let minn = min.reduce((acc,cur) => (cur < acc ? cur : acc), min[0]);
-console.log(minn);
+// let min = [1,2,3,4,5];
+// let minn = min.reduce((acc,cur) => (cur < acc ? cur : acc), min[0]);
+// console.log(minn);
 
+// Print numbers from 10 to 1
+// for(let i=10; i>=1; i--){
+//     console.log(i);
+// }
+
+
+// Count the number of vowels in a string
+const v = "Hello";
+function countVowels(str){
+    const vowels = "aeiouAEIOU";
+    let count = 0;
+    for(let char of str){
+        if(vowels.includes(char)){
+            count++
+        }
+    }
+    return count;
+}
+console.log(countVowels(v));
 

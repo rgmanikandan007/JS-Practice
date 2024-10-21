@@ -1,0 +1,33 @@
+
+// let eng = 95;
+// let tam = 92;
+// let math = 4;
+// let total = eng+tam+math;
+// console.log("Total : " + total);
+// let avg = total/3;
+// console.log("Avg : " + avg.toFixed(2));
+// if(eng >= 35 && tam >=35 && math >=35){
+//     console.log("Pass");
+//     if(eng >= 91 && tam >= 91 && math >= 91){
+//         console.log("Grade A");
+//     }
+//     else if(eng >= 81 && tam >= 81 && math >= 81){
+//         console.log("Grade B");
+//     }
+//     else if(eng >= 71 && tam >= 71 && math >= 71){
+//         console.log("Grade c");
+//     }
+//     else {
+//         console.log("Grade D");
+//     }
+// } 
+// else {
+//     console.log("Fail");
+// }
+
+
+// function area(x,y){
+//     console.log("Length : ",x);
+//     console.log("Breath : ",y);
+// }
+// area(1,2);
