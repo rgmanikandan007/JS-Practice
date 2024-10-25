@@ -65,18 +65,13 @@ console.log(minn);
 
 
 // Count the number of vowels in a string
-const v = "Hello";
-function countVowels(str){
-    const vowels = "aeiouAEIOU";
-    let count = 0;
-    for(let char of str){
-        if(vowels.includes(char)){
-            count++
-        }
-    }
+const string = "Ho";
+function countVowel(str) { 
+    const count = str.match(/[aeiou]/gi);
     return count;
-}
-console.log(countVowels(v));
+}length
+const vo = countVowel(string);
+console.log(vo);
 
 
 // Print the first 10 Fibonacci numbers
