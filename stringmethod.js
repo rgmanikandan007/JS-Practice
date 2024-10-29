@@ -25,7 +25,7 @@ console.log(strrepeat.repeat(2));
 let a = "Mani,Me";
 console.log(a.includes("Me"));
 let b = "Use template literals to create a formatted string that includes variables and multi-line text."
-console.log(b.includes("to create a formatted"));
+console.log(b.includes("to create a formatted string"));
 
 
 
