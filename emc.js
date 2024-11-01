@@ -93,3 +93,19 @@
 // })
 
 
+// function first(){
+//     return 5;
+// }
+// function second(){
+//     return 10;
+// }
+
+// let third = (second(),first());
+// console.log(third);
+
+
+
+// const one = ["one", "tow", "three"];
+// console.log(one.includes("ow"));
+// const second = "hello";
+// console.log(second.includes("ll"));
