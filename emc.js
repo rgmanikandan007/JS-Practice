@@ -120,3 +120,14 @@ function factorial(n) {
     }
 }
 console.log(factorial(5));
+
+
+
+// Count vowels in string
+const string = "Ho";
+function countVowel(str) { 
+    const count = str.match(/[aeiou]/gi).;
+    return count;
+}length
+const result = countVowel(string);
+console.log(result);
