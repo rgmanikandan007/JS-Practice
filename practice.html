@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="myList">
+        <li>item1</li>
+        <li>item2</li>
+    </ul>
+    <button id="addButton">Add Item</button>
+
+    <script>
+        const list = document.getElementById("myList");
+        const btn = document.getElementById("addButton");
+
+        btn.addEventListener("click", function(){
+            const item = document.createElement("li");
+            item.textContent = "New Item";
+            item.style.color = "red";
+            list.appendChild(item);
+        });
+    </script>
+</body>
+</html>
