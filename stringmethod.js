@@ -9,9 +9,22 @@ console.log(str2.substring(2,7));
 
 // 2.Substring Extraction:
 // Use substring() and slice() to extract different parts of a string and compare the results.
+let text = "Javascript";
+console.log(text.substring(0,4));
+console.log(text.slice(0,4));
+console.log(text.slice(-4));
+
+
 
 // 3.String Splitting and Joining:
 // Split a string into an array using a delimiter and then join the array back into a string.
+let str = "Hi,Hello,Welcome";
+let arr = str.split(",");
+let joinStr = arr.join(" ");
+console.log(joinStr);
+
+
+
 
 // 4.Replace and Repeat:
 // Replace a word in a string and then create a repeated version of the new string.
