@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hidden {
+            display: block;
+        }
+        #closedoor{
+            display: none;
+        }
+        #openDoor{
+            display: none;
+        }
+        .show {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 1. How would you change the text content of a specific element on the page using JavaScript -->
+    <div>
+        <p id="changeContent">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <button id="btn">Change</button>
+    </div> <hr>
+
+    <script>
+        const creatNew = document.getElementById("changeContent");
+        const button2 = document.getElementById("btn");
+
+        button2.addEventListener("click", function(){
+            txt = document.createTextNode(" New");
+            creatNew.appendChild(txt);
+        });
+    </script>
+
+
+
+    <!-- 2. How can you change the background color of a element when a button is clicked -->
+    <p id="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi, fugiat?</p>
+    <button id="btn">Click</button>
+
+    <script>
+        const paragraph = document.getElementById("para");
+        const button = document.getElementById("btn");
+
+        button.addEventListener('click', function () {
+            paragraph.style.backgroundColor = "red";
+        });
+    </script>
+
+
+
+    <!-- 3.What steps would you take to toggle the visibility of a element by adding
+      and removing a CSS class using JavaScript? -->
+    <h4 id="show">Door is open</h4>
+    <h4 id="closedoor">Door is close</h4>
+    <button id="hid">Close the door</button>
+    <button id="openDoor">Open the door</button>
+
+    <script>
+        const showId = document.getElementById("show");
+        const close = document.getElementById("closedoor");
+        const hidBtn = document.getElementById("hid");
+        const openBtn = document.getElementById("openDoor");
+
+
+        hidBtn.addEventListener("click", function () {
+            if (showId.classList.toggle("hidden")) {
+                document.write("Door is Closed")
+            } else if(close == true){
+                openBtn.classList.toggle("show");
+                document.write("Door is open")  
+            }
+        });
+    </script>
+
+    <!-- 4. How can you dynamically add a new list item to an unordered list using JavaScript? -->
+    <ul id="myList">
+        <li>item1</li>
+        <li>item2</li>
+    </ul>
+    <button id="addButton">Add Item</button>
+
+
+    <script>
+        const list = document.getElementById("myList");
+        const btn = document.getElementById("addButton");
+
+        btn.addEventListener("click", function () {
+            const item = document.createElement("li");
+            item.textContent = "New Item";
+            list.appendChild(item);
+        });
+    </script>
+
+
+<!-- 5. What approach would you use to remove a specific list item from an unordered list when a button next to it is clicked? -->
+
+
+
+
+
+</body>
+
+</html>
