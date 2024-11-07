@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .filter-container {
+            margin: auto;
+            width: 50%;
+            padding: 10px;
+            text-align: center;
+        }
+
+        input {
+            padding: 10px;
+            width: 300px;
+        }
+
+        ul li {
+            list-style-type: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="filter-container">
+        <input type="text" id="myInput" placeholder="Search for Subject..." onkeyup="filterList()">
+        <ul id="myList">
+            <li>Tamil</li>
+            <li>English</li>
+            <li>Maths</li>
+            <li>Science</li>
+            <li>Social Science</li>
+        </ul>
+    </div>
+
+    <script>
+        function filterList() {
+           const input = document.getElementById('myInput');
+           const filter = input.value.toUpperCase();
+           const ul = document.getElementById("myList");
+           const li = ul.getElementsByTagName('li');
+
+            for (i = 0; i < li.length; i++) {
+                const a = li[i];
+                const txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>

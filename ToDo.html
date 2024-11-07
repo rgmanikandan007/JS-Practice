@@ -5,18 +5,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ToDo List</title>
+    <style>
+        .todo-container {
+            margin: auto;
+            width: 50%;
+            padding: 10px;
+            text-align: center;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        input {
+            padding: 10px;
+        }
+
+        button {
+            padding: 10px;
+        }
+
+        ul li {
+            list-style-type: none;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>ToDo List</h1>
-    <input type="text" id="Taskinput" placeholder="Add Task">
-    <button id="addTaskbutton">Add Task</button>
-    <ul id="taskList"></ul>
+    <div class="todo-container">
+        <h2>ToDo-List</h2>
+        <input type="text" id="Taskinput" placeholder="Add Task">
+        <button id="addTaskbutton">Add Task</button>
+        <ul id="taskList"></ul>
+    </div>
 
     <script>
         document.getElementById("addTaskbutton").addEventListener("click", function () {
             const taskInput = document.getElementById("Taskinput");
             const taskText = taskInput.value.trim();
+            const filterOption = document.querySelector(".filter");
 
             if (taskText !== "") {
                 const li = document.createElement("li");
@@ -27,6 +51,7 @@
 
                 li.addEventListener("click", function () {
                     li.classList.toggle("completed");
+                    li.style.marginRight("2rem");
                 });
 
                 btn.addEventListener("click", function () {
@@ -40,8 +65,11 @@
                 taskInput.value = "";
             }
         });
+
+
+
     </script>
-    
+
 </body>
 
 </html>
