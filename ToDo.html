@@ -40,7 +40,6 @@
         document.getElementById("addTaskbutton").addEventListener("click", function () {
             const taskInput = document.getElementById("Taskinput");
             const taskText = taskInput.value.trim();
-            const filterOption = document.querySelector(".filter");
 
             if (taskText !== "") {
                 const li = document.createElement("li");
@@ -51,7 +50,6 @@
 
                 li.addEventListener("click", function () {
                     li.classList.toggle("completed");
-                    li.style.marginRight("2rem");
                 });
 
                 btn.addEventListener("click", function () {
