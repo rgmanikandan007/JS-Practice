@@ -21,6 +21,10 @@
         .show {
             display: block;
         }
+
+        .example-img img {
+            width: 30%;
+        }
     </style>
 </head>
 
@@ -102,8 +106,52 @@
     </script> -->
 
 
-<!-- 5. What approach would you use to remove a specific list item from an unordered list when a button next to it is clicked? -->
+    <!-- 5. What approach would you use to remove a specific list item from an unordered list when a button next to it is clicked? -->
+    <ul id="myList">
+        <li>item1</li>
+        <li>item2</li>
+    </ul>
+    <button id="addButton">Add Item</button>
     
+    <script>
+        const list = document.getElementById("myList");
+        const btn = document.getElementById("addButton");
+    
+        btn.addEventListener("click", function () {
+            const item = document.createElement("li");
+            item.textContent = "New Item ";
+
+            const createBtn = document.createElement("button");
+            createBtn.textContent = "Delete";
+    
+            createBtn.addEventListener("click", function(){
+                item.remove();
+            });
+    
+            item.appendChild(createBtn);
+            list.appendChild(item);
+        });
+    </script>
+
+
+    <!-- 6. How would you modify the src attribute of an element to display a different image when a button is clicked? -->
+
+    <div class="example-img">
+        <img src="scree1.jpg" id="theimage" alt="imgg">
+        <button id="afterimg">Click</button>
+    </div>
+
+    <script>
+        const getBtn = document.getElementById("afterimg");
+
+        getBtn.addEventListener("click",function(){
+            const getImg = document.getElementById("theimage");
+            getImg.src = "Scree2.png";
+        });
+    </script>
+
+
+
 
 
 </body>
