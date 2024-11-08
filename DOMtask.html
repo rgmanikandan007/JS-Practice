@@ -30,7 +30,7 @@
 
 <body>
     <!-- 1. How would you change the text content of a specific element on the page using JavaScript -->
-    <!-- <div>
+    <div>
         <p id="changeContent">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
         <button id="btn">Change</button>
     </div> <hr>
@@ -43,12 +43,12 @@
             txt = document.createTextNode(" New");
             creatNew.appendChild(txt);
         });
-    </script> -->
+    </script>
 
 
 
     <!-- 2. How can you change the background color of a element when a button is clicked -->
-    <!-- <p id="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi, fugiat?</p>
+    <p id="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi, fugiat?</p>
     <button id="btn">Click</button>
 
     <script>
@@ -58,13 +58,13 @@
         button.addEventListener('click', function () {
             paragraph.style.backgroundColor = "red";
         });
-    </script> -->
+    </script>
 
 
 
     <!-- 3.What steps would you take to toggle the visibility of a element by adding
       and removing a CSS class using JavaScript? -->
-    <!-- <h4 id="show">Door is open</h4>
+    <h4 id="show">Door is open</h4>
     <h4 id="closedoor">Door is close</h4>
     <button id="hid">Close the door</button>
     <button id="openDoor">Open the door</button>
@@ -84,10 +84,10 @@
                 document.write("Door is open")  
             }
         });
-    </script> -->
+    </script>
 
     <!-- 4. How can you dynamically add a new list item to an unordered list using JavaScript? -->
-    <!-- <ul id="myList">
+    <ul id="myList">
         <li>item1</li>
         <li>item2</li>
     </ul>
@@ -95,19 +95,19 @@
 
 
     <script>
-        const list = document.getElementById("myList");
-        const btn = document.getElementById("addButton");
+        const newlist = document.getElementById("myList");
+        const newbtn = document.getElementById("addButton");
 
-        btn.addEventListener("click", function () {
+        newbtn.addEventListener("click", function () {
             const item = document.createElement("li");
             item.textContent = "New Item";
-            list.appendChild(item);
+            newlist.appendChild(item);
         });
-    </script> -->
+    </script>
 
 
     <!-- 5. What approach would you use to remove a specific list item from an unordered list when a button next to it is clicked? -->
-    <!-- <ul id="myList">
+    <ul id="myList">
         <li>item1</li>
         <li>item2</li>
     </ul>
@@ -131,12 +131,12 @@
             item.appendChild(createBtn);
             list.appendChild(item);
         });
-    </script> -->
+    </script>
 
 
     <!-- 6. How would you modify the src attribute of an element to display a different image when a button is clicked? -->
 
-    <!-- <div class="example-img">
+    <div class="example-img">
         <img src="scree1.jpg" id="theimage" alt="imgg">
         <button id="afterimg">Click</button>
     </div>
@@ -148,7 +148,7 @@
             const getImg = document.getElementById("theimage");
             getImg.src = "Scree2.png";
         });
-    </script> -->
+    </script>
 
 
 <!-- 7. How can you update the text content of a element based on user input from a text field when a button is clicked? -->
