@@ -107,7 +107,7 @@
 
 
     <!-- 5. What approach would you use to remove a specific list item from an unordered list when a button next to it is clicked? -->
-    <ul id="myList">
+    <!-- <ul id="myList">
         <li>item1</li>
         <li>item2</li>
     </ul>
@@ -131,12 +131,12 @@
             item.appendChild(createBtn);
             list.appendChild(item);
         });
-    </script>
+    </script> -->
 
 
     <!-- 6. How would you modify the src attribute of an element to display a different image when a button is clicked? -->
 
-    <div class="example-img">
+    <!-- <div class="example-img">
         <img src="scree1.jpg" id="theimage" alt="imgg">
         <button id="afterimg">Click</button>
     </div>
@@ -147,6 +147,22 @@
         getBtn.addEventListener("click",function(){
             const getImg = document.getElementById("theimage");
             getImg.src = "Scree2.png";
+        });
+    </script> -->
+
+
+<!-- 7. How can you update the text content of a element based on user input from a text field when a button is clicked? -->
+    <div>
+        <p id="getPara">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum, laboriosam.</p>
+        <button id="clickBtn">Click</button>
+    </div>
+
+    <script>
+        const createBtn = document.getElementById("clickBtn");
+        const createPara = document.getElementById("getPara");
+
+        createBtn.addEventListener("click", function(){
+            createPara.innerText = "Hiii";
         });
     </script>
 
