@@ -9,8 +9,8 @@ for(let i=1; i<=20; i+=2){
 }
 
 // Print odd numbers from 1 to 20
-for(let i=2; i<=20; i++){
-    console.log(i)
+for(let i=2; i<=20; i+=3){
+    console.log(i);
 }
 
 // Sum of numbers from 1 to 10
@@ -24,7 +24,7 @@ console.log(sum);
 let number = 5;
 let factorial = 1;
 for(let i=1; i<=number; i++){
-    factorial *= i;
+    factorial *= i; 
 }
 console.log(factorial);
 
