@@ -1,0 +1,23 @@
+  <!-- 3.What steps would you take to toggle the visibility of a element by adding
+      and removing a CSS class using JavaScript? -->
+      <h4 id="show">Door is open</h4>
+      <h4 id="closedoor">Door is close</h4>
+      <button id="hid">Close the door</button>
+      <button id="openDoor">Open the door</button>
+  
+      <script>
+          const showId = document.getElementById("show");
+          const close = document.getElementById("closedoor");
+          const hidBtn = document.getElementById("hid");
+          const openBtn = document.getElementById("openDoor");
+  
+  
+          hidBtn.addEventListener("click", function () {
+              if (showId.classList.toggle("hidden")) {
+                  document.write("Door is Closed")
+              } else if(close == true){
+                  openBtn.classList.toggle("show");
+                  document.write("Door is open")  
+              }
+          });
+      </script>
