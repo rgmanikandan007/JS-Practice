@@ -1,0 +1,16 @@
+.container{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.bmi-flex input{
+    display: block;
+    width: 30%;
+}
+.bmi-top{
+    margin-bottom: 30px;
+    margin-left: 150px;
+}
+.bmi-top span{
+    margin-left: 40px;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" id="firstInput">
+        <input type="text" id="secondInput">
+        <input type="submit" id="clickBtn">
+    </div>
+
+    <script>
+        const a = document.getElementById("firstInput");
+        const b =  document.getElementById("secondInput");
+        const clickBtn = document.getElementById("clickBtn");
+
+        clickBtn.addEventListener("click",function(a,b){
+            let result = a + b;
+            console.log(result);
+        })
+    </script>
+
+</body>
+
+</html>

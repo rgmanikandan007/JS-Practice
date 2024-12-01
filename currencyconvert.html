@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+</head>
+
+<body>
+    <h1>Currency Converter</h1>
+    <div>
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" placeholder="Enter amount">
+    </div>
+    <div>
+        <label for="fromCurrency">From:</label>
+        <select id="fromCurrency">
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="INR">INR</option>
+        </select>
+    </div>
+    <div>
+        <label for="toCurrency">To:</label>
+        <select id="toCurrency">
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="INR">INR</option>
+        </select>
+    </div>
+    <button id="convert">Convert</button>
+    <h2 id="result"></h2>
+
+    <script>
+        const exchangeRates = {
+            USD: { USD: 1, EUR: 0.91, INR: 83.15 },
+            EUR: { USD: 1.10, EUR: 1, INR: 91.2 },
+            INR: { USD: 0.012, EUR: 0.011, INR: 1 }
+        };
+
+        document.getElementById('convert').addEventListener('click', () => {
+            const amount = parseFloat(document.getElementById('amount').value);
+            const fromCurrency = document.getElementById('fromCurrency').value;
+            const toCurrency = document.getElementById('toCurrency').value;
+
+            if (isNaN(amount) || amount <= 0) {
+                alert("Please enter a valid amount!");
+                return;
+            }
+
+            const rate = exchangeRates[fromCurrency][toCurrency];
+            const convertedAmount = (amount * rate).toFixed(2);
+
+            document.getElementById('result').innerText =
+                `${amount} ${fromCurrency} = ${convertedAmount} ${toCurrency}`;
+        });
+
+    </script>
+</body>
+
+</html>

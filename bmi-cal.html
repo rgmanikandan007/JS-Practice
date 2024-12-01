@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="bmi-cal.css">
+</head>
+
+<body>
+    <div class="bmi">
+        <div class="container">
+            <div class="bmi-top">
+                <h1 id="result">Normal weight</h1>
+                <span id="bmi-value">20.0</span>
+            </div>
+            <div class="bmi-flex">
+                <label for="weight">Weight:</label>
+                <input type="range" min="20" max="200" value="20" id="weight" oninput="calculate()">
+                <span id="weight-value">20 kg</span>
+                <label for="height">Height:</label>
+                <input type="range" min="100" max="250" value="100" id="height" oninput="calculate()">
+                <span id="height-value">100 cm</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function calculate() {
+            var bmi;
+            var result = document.getElementById('result');
+            var bmiValueDisplay = document.getElementById('bmi-value');
+            var height = parseInt(document.getElementById('height').value);
+            var weight = parseInt(document.getElementById('weight').value);
+
+            // Update displayed height and weight
+            document.getElementById('height-value').textContent = height + " cm";
+            document.getElementById('weight-value').textContent = weight + " kg";
+
+            // Calculate BMI
+            bmi = (weight / Math.pow((height / 100), 2)).toFixed(1);
+            bmiValueDisplay.textContent = bmi;
+
+            // Determine BMI category
+            if (bmi < 18) {
+                result.textContent = "Underweight";
+            } else if (bmi >= 18 && bmi <= 24) {
+                result.textContent = "Normal weight";
+            } else if (bmi >= 25 && bmi <= 29) {
+                result.textContent = "Overweight";
+            } else {
+                result.textContent = "Obese";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

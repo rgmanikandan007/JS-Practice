@@ -39,7 +39,7 @@
     <script>
         document.getElementById("addTaskbutton").addEventListener("click", function () {
             const taskInput = document.getElementById("Taskinput");
-            const taskText = taskInput.value.trim();
+            const taskText = taskInput.value.trim();    
 
             if (taskText !== "") {
                 const li = document.createElement("li");
@@ -58,9 +58,9 @@
 
                 li.appendChild(btn);
 
-                document.getElementById("taskList").appendChild(li);
+                    document.getElementById("taskList").appendChild(li);
 
-                taskInput.value = "";
+                    taskInput.value = "";
             }
         });
 
