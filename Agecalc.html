@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculaor</title>
+    <link rel="stylesheet" href="Agecalc.css">
+</head>
+
+<body>
+    <!-- <div class="agecalculator">
+        <h2>Age Calculator</h2>
+        <form action="#">
+            <div>
+                <label for="#">Enter your Date Of Birth :</label>
+                <div><input type="date" id="dob"></div>
+            </div>
+            <div class="btn"><button onclick="calculate()">Calculate Age</button></div>
+        </form>
+        <div id="result"></div>
+    </div>
+
+
+    <script>
+        function calculate(){
+            const dob = document.getElementById("dob")
+            if(!dob){
+                alert("Please select DOB");
+                return
+            }
+
+        }
+    </script> -->
+
+    <script>
+        let a = prompt();
+        function calculate(year){
+            if(year % 4 === 0){
+                console.log("Leap year")    
+            } else {
+                console.log("not leap year")
+            }
+        }
+        calculate(a);
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+body {
+    margin: auto;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background-color: rgb(247, 247, 247);
+}
+.agecalculator{
+    text-align: center;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    width: 25%;
+}
+.agecalculator h2{
+    margin-bottom: 2rem;
+}
+input{
+    padding: 10px 20px;
+    margin-top: 1.5rem;
+}
+.btn{
+    margin-top: 1.5rem;
+}
+.btn button{
+    padding: 10px 15px;
+    background-color: rgb(49, 145, 69);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#result{
+    margin-top: 1rem;
+}
