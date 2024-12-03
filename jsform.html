@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+    <script>
+        const allDiv = document.createElement("div");
+        const containerDiv = document.createElement("div");
+        const inputDiv = document.createElement("div");
+        const btnDiv = document.createElement("div");
+        const h2 = document.createElement("h2");
+
+        const username = document.createElement("input");
+        const email = document.createElement("input");
+        const mobile = document.createElement("input");
+
+        const btn = document.createElement("button");
+
+        h2.textContent = "Login Form";
+        containerDiv.appendChild(h2);
+
+        inputDiv.appendChild(username);
+        username.placeholder = "Enter Name..."
+        inputDiv.appendChild(email);
+        email.placeholder = "Enter Email..."
+        inputDiv.appendChild(mobile);
+        mobile.placeholder = "Enter Mobile Number..."
+
+        btn.textContent = "Login"
+        btnDiv.appendChild(btn);
+        btn.addEventListener("click", function(){
+            if(username.value == ""){
+                alert("Please Enter Username");
+            } else if(email.value == ""){
+                alert("Please Enter Email");
+            } else if(mobile.value == ""){
+                alert("Please Enter Mobile Number");
+            } else {
+                alert("Successfully Submitted");
+            }
+        })
+
+        document.body.appendChild(allDiv);
+        document.body.appendChild(containerDiv);
+        document.body.appendChild(inputDiv);
+        document.body.appendChild(btnDiv);
+        
+
+        // Apply styles to inputDiv
+        inputDiv.style.display = "flex";
+        inputDiv.style.flexDirection = "column";
+        inputDiv.style.gap = "20px";
+        inputDiv.style.maxWidth = "300px";
+        inputDiv.style.margin = "0 auto";
+        username.style.padding = "10px";
+        email.style.padding = "10px";
+        mobile.style.padding = "10px";
+        h2.style.textAlign = "center";
+        btnDiv.style.textAlign = "center";
+        btnDiv.style.marginTop = "20px";
+        btn.style.padding = "5px 20px";
+        btn.style.border = "none";
+        btn.style.borderRadius = "7px";
+        btn.style.backgroundColor = "#ffb56f ";
+        btn.style.color = "#fff";
+        btn.style.cursor = "pointer";
+
+    </script>
+</body>
+
+</html>
