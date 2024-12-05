@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    <h1>Heading</h1>
-    <p id="para">Hello</p>
 
+<body>
+    <input type="text" id="num1">
+    <input type="text" id="num2">
+    <p id="inser"></p>
+    <button onclick="calcked()">clicked</button>
     <script>
-        const p = document.getElementById("para");
-        p.innerHTML = "Vanakkam";
+        function calcked() {
+            const number1 = document.getElementById("num1").value;
+            const number2 = document.getElementById("num2").value;
+            const insert = document.getElementById("insert");
+            console.log(number1.value)
+        }
     </script>
 </body>
+
 </html>
