@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <form id="register-form">
+            <input id="username" type="text" placeholder="Name" value="" />
+            <input id="password" type="password" placeholder="Password" value="" />
+            <button onclick="enter()">Login now</button>
+        </form>
+    </div>
+
+
+    <script>
+        function enter() {
+            const userName = document.getElementById("username");
+            const passWord = document.getElementById("password");
+
+            localStorage.setItem("username", userName.value);
+            localStorage.setItem("password", passWord.value);
+
+            const a = localStorage.getItem("username");
+            const b = localStorage.getItem("password");
+
+            if (userName.value === a && passWord.value === b) {
+                alert("Ok");
+            } else {
+                alert("Not Ok");
+            }
+
+        }
+    </script>
+</body>
+
+</html>

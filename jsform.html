@@ -33,15 +33,15 @@
 
         btn.textContent = "Login"
         btnDiv.appendChild(btn);
-        btn.addEventListener("click", function(){
-            if(username.value == ""){
-                alert("Please Enter Username");
-            } else if(email.value == ""){
-                alert("Please Enter Email");
-            } else if(mobile.value == ""){
-                alert("Please Enter Mobile Number");
+        
+        btn.addEventListener("click", function () {
+            const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/; 
+            const emailValue = email.value; 
+
+            if (!emailRegex.test(emailValue)) {
+                console.log("Please enter a correct email value");
             } else {
-                alert("Successfully Submitted");
+                console.log("Valid email:", emailValue);
             }
         })
 
@@ -49,7 +49,7 @@
         document.body.appendChild(containerDiv);
         document.body.appendChild(inputDiv);
         document.body.appendChild(btnDiv);
-        
+
 
         // Apply styles to inputDiv
         inputDiv.style.display = "flex";

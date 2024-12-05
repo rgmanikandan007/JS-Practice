@@ -26,7 +26,8 @@
         ul li {
             list-style-type: none;
         }
-        .lists{
+
+        .lists {
             display: flex;
         }
     </style>
@@ -46,44 +47,35 @@
         const btn = document.getElementById("addTaskbutton");
 
         btn.addEventListener("click", function () {
-    const inputData = document.getElementById("taskInput").value;
-    const taskShow = document.getElementById("taskList");
+            const inputData = document.getElementById("taskInput").value;
+            const taskShow = document.getElementById("taskList");
 
-    if (inputData.trim() !== "") {
-        // Create a container for the task and delete button
-        const taskContainer = document.createElement("div");
-        taskContainer.style.display = "flex";
-        taskContainer.style.alignItems = "center";
-        taskContainer.style.marginBottom = "0.5rem";
+            if (inputData.trim() !== "") {
+                const taskContainer = document.createElement("div");
+                taskContainer.style.display = "flex";
+                taskContainer.style.alignItems = "center";
+                taskContainer.style.marginBottom = "0.5rem";
 
-        // Create the task item (li)
-        const li = document.createElement("li");
-        li.innerHTML = inputData;
-        li.style.marginRight = "1rem";
+                const li = document.createElement("li");
+                li.innerHTML = inputData;
+                li.style.marginRight = "1rem";
 
-        // Create the delete button
-        const deleteBtn = document.createElement("button");
-        deleteBtn.innerHTML = "Delete";
-        deleteBtn.style.padding = "5px 20px";
+                const deleteBtn = document.createElement("button");
+                deleteBtn.innerHTML = "Delete";
+                deleteBtn.style.padding = "5px 20px";
 
-        // Add delete functionality
-        deleteBtn.addEventListener("click", function () {
-            taskShow.removeChild(taskContainer);
+                deleteBtn.addEventListener("click", function () {
+                    taskShow.removeChild(taskContainer);
+                });
+
+                taskContainer.appendChild(li);
+                taskContainer.appendChild(deleteBtn);
+
+                taskShow.appendChild(taskContainer);
+
+                document.getElementById("taskInput").value = "";
+            }
         });
-
-        // Append task and button to the container
-        taskContainer.appendChild(li);
-        taskContainer.appendChild(deleteBtn);
-
-        // Append the container to the task list
-        taskShow.appendChild(taskContainer);
-
-        // Clear the input field
-        document.getElementById("taskInput").value = "";
-    }
-
-    taskShow.style.display = "block";
-});
 
     </script>
 
