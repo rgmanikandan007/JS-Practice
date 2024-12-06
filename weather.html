@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+    }
+
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Weather App</h1>
+  <form id="weatherForm">
+    <input type="text" id="cityInput" placeholder="Enter city name" required />
+    <button type="submit">Get Weather</button>
+  </form>
+  <div id="weatherDisplay"></div>
+
+  <script>
+    // Constants
+    const API_KEY = "your_actual_api_key_here"; // Replace with your OpenWeatherMap API key
+    const BASE_URL = "https://api.openweathermap.org/data/2.5/weather";
+
+    // Selectors
+    const weatherForm = document.querySelector("#weatherForm");
+    const cityInput = document.querySelector("#cityInput");
+    const weatherDisplay = document.querySelector("#weatherDisplay");
+
+    // Utility Functions
+    const fetchWeather = async (city) => {
+      try {
+        const response = await fetch(`${BASE_URL}?q=${city}&appid=${API_KEY}&units=metric`);
+        if (!response.ok) throw new Error("City not found");
+        const data = await response.json();
+        displayWeather(data);
+      } catch (error) {
+        weatherDisplay.innerHTML = `<p class="error">${error.message}</p>`;
+      }
+    };
+
+    const displayWeather = (data) => {
+      const { name, main, weather } = data;
+      weatherDisplay.innerHTML = `
+        <h2>Weather in ${name}</h2>
+        <p>Temperature: ${main.temp}°C</p>
+        <p>Humidity: ${main.humidity}%</p>
+        <p>Condition: ${weather[0].description}</p>
+    `;
+    };
+
+    // Event Listener
+    weatherForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const city = cityInput.value.trim();
+      if (city) {
+        fetchWeather(city);
+        cityInput.value = ""; // Clear input after submission
+      } else {
+        weatherDisplay.innerHTML = `<p class="error">Please enter a city name</p>`;
+      }
+    });
+
+  </script>
+</body>
+
+</html>
