@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,32 +12,40 @@
       padding: 20px;
       background-color: #f9f9f9;
     }
+
     .container {
       max-width: 500px;
       margin: auto;
       background: white;
-      padding: 20px;
+      padding: 40px;
       border-radius: 8px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
+
     h2 {
       text-align: center;
       color: #333;
     }
+
     .form-group {
       margin-bottom: 15px;
     }
+
     .form-group label {
       display: block;
       margin-bottom: 5px;
       color: #555;
+      font-size: 14px;
+      letter-spacing: 1px;
     }
+
     .form-group input {
       width: 100%;
       padding: 10px;
       border: 1px solid #ccc;
       border-radius: 4px;
     }
+
     .form-group button {
       width: 100%;
       padding: 10px;
@@ -46,9 +55,11 @@
       border-radius: 4px;
       cursor: pointer;
     }
+
     .form-group button:hover {
       background-color: #0056b3;
     }
+
     .output {
       margin-top: 20px;
       padding: 10px;
@@ -56,30 +67,32 @@
       border: 1px solid #ddd;
       border-radius: 4px;
     }
+
     .output p {
       margin: 5px 0;
       color: #333;
     }
   </style>
 </head>
+
 <body>
   <div class="container">
     <h2>Event Booking System</h2>
     <form id="bookingForm">
       <div class="form-group">
-        <label for="eventName">Event Name:</label>
+        <label for="eventName">Event name:</label>
         <input type="text" id="eventName" placeholder="e.g., Seminar" required>
       </div>
       <div class="form-group">
-        <label for="yourName">Your Name:</label>
+        <label for="yourName">Your name:</label>
         <input type="text" id="yourName" placeholder="e.g., Msd" required>
       </div>
       <div class="form-group">
-        <label for="email">Your Email:</label>
+        <label for="email">Your email:</label>
         <input type="email" id="email" placeholder="e.g., abc@gmail.com" required>
       </div>
       <div class="form-group">
-        <label for="tickets">Number of Tickets:</label>
+        <label for="tickets">Number of tickets:</label>
         <input type="number" id="tickets" min="1" required>
       </div>
       <div class="form-group">
@@ -92,9 +105,9 @@
   </div>
 
   <script>
-    document.getElementById('bookingForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-      
+    document.getElementById('bookingForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
       const eventName = document.getElementById('eventName').value;
       const yourName = document.getElementById('yourName').value;
       const email = document.getElementById('email').value;
@@ -111,4 +124,5 @@
     });
   </script>
 </body>
+
 </html>

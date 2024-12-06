@@ -13,7 +13,7 @@
             box-sizing: border-box;
             font-family: Arial, sans-serif;
         }
-    
+
         /* Container Styling */
         .container {
             max-width: 600px;
@@ -24,21 +24,23 @@
             background-color: #f9f9f9;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-    
+
         /* Heading Styling */
         .container h1 {
             text-align: center;
             margin-bottom: 20px;
             color: #333;
         }
-    
+
         /* Form Styling */
         form label {
             display: block;
             margin: 10px 0 5px;
             color: #555;
+            font-size: 14px;
+            letter-spacing: 1px;
         }
-    
+
         form input,
         form textarea,
         form button {
@@ -48,12 +50,12 @@
             border: 1px solid #ccc;
             border-radius: 5px;
         }
-    
+
         form textarea {
             resize: none;
             height: 80px;
         }
-    
+
         form button {
             background-color: #007BFF;
             color: white;
@@ -61,11 +63,11 @@
             cursor: pointer;
             font-size: 16px;
         }
-    
+
         form button:hover {
             background-color: #0056b3;
         }
-    
+
         /* Output Section */
         #output {
             margin-top: 20px;
@@ -77,7 +79,7 @@
             line-height: 1.6;
         }
     </style>
-    
+
 </head>
 
 <body>
@@ -86,21 +88,21 @@
         <form action="#" id="onSubmit">
             <label for="#">Enter name</label>
             <input type="text" id="name" placeholder="Enter your name"><br>
-            <label for="#">Enter Mobile No</label>
-            <input type="text" id="mobileno" placeholder="Enter your Mobile No"><br>
-            <label for="#">Enter Email</label>
-            <input type="text" id="email" placeholder="Enter your Email"><br>
-            <label for="#">Enter Experience</label>
-            <input type="text" id="experience" placeholder="Enter your Experience"><br>
-            <label for="#">Enter Skills</label>
-            <textarea name="Enter Skills" id="skills" placeholder="Enter Skills"></textarea><br>
+            <label for="#">Enter mobile number</label>
+            <input type="text" id="mobileno" placeholder="Enter your mobile number"><br>
+            <label for="#">Enter email</label>
+            <input type="text" id="email" placeholder="Enter your email"><br>
+            <label for="#">Enter experience</label>
+            <input type="text" id="experience" placeholder="Enter your experience"><br>
+            <label for="#">Enter skills</label>
+            <textarea name="Enter Skills" id="skills" placeholder="Enter skills"></textarea><br>
             <button>Submit</button>
         </form>
         <div id="output"></div>
     </div>
 
     <script>
-        document.getElementById("onSubmit").addEventListener("submit", function(e){
+        document.getElementById("onSubmit").addEventListener("submit", function (e) {
             e.preventDefault();
 
             const name = document.getElementById("name").value;
@@ -109,7 +111,7 @@
             const experience = document.getElementById("experience").value;
             const skills = document.getElementById("skills").value;
 
-            const result = `${name}<br>${email}<br>${mobileNo}<br>${experience}<br>${skills}`
+            const result = `Name: ${name}<br> Email: ${email}<br> Mobile:${mobileNo}<br> Experience: ${experience}<br> Skills: ${skills}`
             // console.log(`${name}<br>${email}<br>${mobileNo}<br>${experience}<br>${skills}`)
 
             document.getElementById("output").innerHTML = `${result}`
